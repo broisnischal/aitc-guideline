@@ -1,0 +1,93 @@
+---
+title: Node JS
+sidebar_label: Guideline for Node JS
+---
+
+# Backend Development Guidelines
+
+## Naming Conventions
+
+### Variables
+
+- Use nouns or adjectives and camelCase (e.g. `roleName`)
+- Minimize use of abbreviations  
+- Avoid one-character names like 'o', 'p', 'q'
+- Use descriptive boolean variable names (e.g. `isDeleted`) 
+- Be self-descriptive to enhance clarity and maintainability
+
+### Constants 
+
+- Use UPPERCASE with underscores (e.g. `CLIENT_URL`) 
+- Indicates immutability
+
+## Request Path
+
+- Use nouns instead of verbs (e.g. `/orders` not `/getOrders`)
+- Be clear, descriptive and reflect resource purpose  
+- Simple names with hyphens or underscores
+- Include version number (e.g. `/v1/resource`)
+
+## Folder Structure
+
+- Separate code into appropriate layers following Model-Controller-Service pattern
+- Have routes, handlers, and middlewares
+
+## Component Organization
+
+- One file per component/class/interface with matching name
+
+## Configuration Management 
+
+- Keep sensitive data in separate config files and `.gitignore`
+- Use environment variables
+
+## Versioning
+
+- Include version in URL for backward compatibility  
+
+## Database Integration
+
+- Don't directly include user input in queries
+- Use ORM like Sequelize or Mongoose
+
+## Logging
+
+- Use libraries like Winston or Morgan 
+
+## Status Codes
+
+- Follow convention:
+  - `200` for success
+  - `201` for creation  
+  - `204` for success but no response 
+  - `400` for bad request
+  - Error codes for authentication issues, forbidden access, resource not found
+
+## Security 
+
+- Use SSL/TLS encryption
+- Input validation and data sanitization 
+- Rate limiting 
+- Token based authentication (OAUTH2)
+- User roles and permissions  
+
+## Error Handling
+
+- Descriptive messages
+- Use JSON with proper status codes
+- Server-side logging
+
+## Pagination/Filtering/Searching/Sorting
+
+- Always use `page` and `limit ` params 
+- Use `filter` param to filter data
+- Use `q` param to search data  
+- Sort data in GET requests
+
+## Other Guidelines
+
+- Comments for complex logic  
+- Consistent JSON request/response
+- Implement CORS  
+- Unit, integration, end-to-end testing
+- Rate limiting

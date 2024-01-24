@@ -33,7 +33,7 @@ const config: DocsThemeConfig = {
   },
   nextThemes: {},
   primaryHue: {
-    dark: 10,
+    dark: 800,
     light: 30,
   },
 };
