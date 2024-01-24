@@ -2,6 +2,12 @@
   "index": "Introduction",
   "another": "Another Page",
   "advanced": "Advanced (A Folder)",
+  "portfolio": {
+    "title": "Portfolio",
+    "type": "page",
+    "href": "https://aitc.ai",
+    "newWindow": true
+  },
   "about": {
     "title": "About",
     "type": "page"
